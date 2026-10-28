@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EasyHotel | Luxury Hotel Experience</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --dark: #101010;
+            --card: #191919;
+            --white: #ffffff;
+            --gray: #b8b8b8;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, input, select {
+            font: inherit;
+        }
+
+        /* Navigation */
+
+        header {
+            background: rgba(16, 16, 16, 0.97);
+            border-bottom: 1px solid #333;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .gold-button {
+            background: var(--gold);
+            color: #111;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gold-button:hover {
+            background: #f0d46b;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            padding: 80px 7%;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.88),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            color: #e0e0e0;
+            font-size: 17px;
+            max-width: 530px;
+            margin-bottom: 30px;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 85px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading p {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(28px, 4vw, 40px);
+        }
+
+        .section-heading .description {
+            color: var(--gray);
+            margin-top: 12px;
+            letter-spacing: 0;
+            text-transform: none;
+            font-size: 15px;
+        }
+
+        /* Booking Form */
+
+        .booking-section {
+            background: #171717;
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) auto;
+            gap: 15px;
+            align-items: end;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold);
+            font-size: 13px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+        }
+
+        /* Rooms */
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .room-card {
+            background: var(--card);
+            border: 1px solid #292929;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .room-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--gold);
+        }
+
+        .rooms-message {
+            grid-column: 1 / -1;
+            color: var(--gray);
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .room-status {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid #66551c;
+            border-radius: 20px;
+            padding: 3px 10px;
+            margin-bottom: 12px;
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+
+        .room-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .room-info {
+            padding: 23px;
+        }
+
+        .room-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .room-info p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .room-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            border-top: 1px solid #333;
+            padding-top: 17px;
+        }
+
+        .price {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .price small {
+            color: var(--gray);
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .small-button {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 9px 13px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .small-button:hover {
+            background: var(--gold);
+            color: #111;
+        }
+
+        /* About */
+
+        .about {
+            background: #171717;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about h2 span {
+            color: var(--gold);
+        }
+
+        .about p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            border-left: 3px solid var(--gold);
+            padding: 10px 14px;
+            background: #202020;
+        }
+
+        .feature strong {
+            display: block;
+            color: var(--gold);
+        }
+
+        .feature span {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* Services */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            padding: 30px 25px;
+            background: var(--card);
+            border: 1px solid #303030;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            background:
+                linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.9)),
+                url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1500&q=80")
+                center/cover;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #080808;
+            padding: 30px 7%;
+            text-align: center;
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 1000px) {
+            .booking-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .rooms-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                padding: 15px 5%;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 13px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 520px;
+                padding: 60px 5%;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .booking-form,
+            .rooms-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .about img {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <a href="#" class="logo">EasyHotel.</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#booking" class="gold-button">Book Now</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">Welcome to EasyHotel</p>
+
+            <h1>
+                Experience<br>
+                <span>Luxury & Comfort</span>
+            </h1>
+
+            <p>
+                Discover an exceptional hotel experience where
+                elegant design, premium comfort, and outstanding
+                hospitality come together.
+            </p>
+
+            <a href="#rooms" class="gold-button">Explore Our Rooms</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="section-heading">
+            <p>Plan Your Stay</p>
+            <h2>Find Your Perfect Room</h2>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+
+            <div class="form-group">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" id="checkin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" id="checkout" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Guests</label>
+                <select id="guests" required>
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="roomType">Room Type</label>
+                <select id="roomType" required>
+                    <option value="Any">Any Room</option>
+                    <option value="Single">Single Room</option>
+                    <option value="Double">Double Room</option>
+                    <option value="Deluxe">Deluxe Room</option>
+                    <option value="Suite">Luxury Suite</option>
+                    <option value="Family">Family Room</option>
+                </select>
+            </div>
+
+            <button type="submit" class="gold-button">
+                Search
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+        <div class="section-heading">
+            <p>Our Accommodation</p>
+            <h2>Discover Our Rooms</h2>
+            <p class="description">
+                Find the perfect room for your next stay.
+            </p>
+        </div>
+
+        <div class="rooms-grid" id="roomsGrid" aria-live="polite">
+            <p class="rooms-message">Loading rooms from the database...</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <img
+            src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85"
+            alt="Elegant hotel interior"
+        >
+
+        <div>
+            <p class="eyebrow">About EasyHotel</p>
+
+            <h2>
+                Comfort Meets<br>
+                <span>Elegance</span>
+            </h2>
+
+            <p>
+                EasyHotel is a hotel-management website project
+                designed to make discovering rooms and planning
+                a hotel stay easier.
+            </p>
+
+            <p>
+                Our goal is to provide a simple booking experience
+                with room information, hotel services, and smart
+                digital assistance.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <strong>Luxury</strong>
+                    <span>Elegant design</span>
+                </div>
+
+                <div class="feature">
+                    <strong>Comfort</strong>
+                    <span>Relaxing rooms</span>
+                </div>
+
+                <div class="feature">
+                    <strong>Convenience</strong>
+                    <span>Easy navigation</span>
+                </div>
+
+                <div class="feature">
+                    <strong>Smart Service</strong>
+                    <span>Future AI assistant</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+
+        <div class="section-heading">
+            <p>What We Offer</p>
+            <h2>Our Hotel Services</h2>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🛎️</div>
+                <h3>Room Service</h3>
+                <p>
+                    Convenient service to make your stay more comfortable.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>Breakfast</h3>
+                <p>
+                    Start your day with a delicious breakfast experience.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Transportation</h3>
+                <p>
+                    Explore optional transportation services for guests.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <p class="eyebrow">Your Stay Starts Here</p>
+
+        <h2>Ready for a Better Stay?</h2>
+
+        <p>
+            Explore our rooms and discover the EasyHotel experience.
+        </p>
+
+        <a href="#booking" class="gold-button">
+            Plan Your Stay
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 <strong>EasyHotel</strong>.
+            Student Project. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        const checkin = document.getElementById("checkin");
+        const checkout = document.getElementById("checkout");
+        const roomsGrid = document.getElementById("roomsGrid");
+        let allRooms = [];
+
+        // Set the earliest allowed booking date to today.
+        const today = new Date();
+        const todayString =
+            today.getFullYear() + "-" +
+            String(today.getMonth() + 1).padStart(2, "0") + "-" +
+            String(today.getDate()).padStart(2, "0");
+
+        checkin.min = todayString;
+        checkout.min = todayString;
+
+        checkin.addEventListener("change", function () {
+            checkout.min = checkin.value || todayString;
+            if (checkout.value && checkout.value <= checkin.value) {
+                checkout.value = "";
+            }
+        });
+
+        function escapeHTML(value) {
+            return String(value ?? "").replace(/[&<>"']/g, function (character) {
+                return {
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    "\"": "&quot;",
+                    "'": "&#39;"
+                }[character];
+            });
+        }
+
+        function roomImage(roomType) {
+            const type = String(roomType || "").toLowerCase();
+            if (type.includes("suite")) {
+                return "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80";
+            }
+            if (type.includes("deluxe") || type.includes("family")) {
+                return "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80";
+            }
+            return "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80";
+        }
+
+        function roomCategory(roomType) {
+            const type = String(roomType || "").toLowerCase();
+            if (type.includes("single")) return "Single";
+            if (type.includes("double") || type.includes("classic")) return "Double";
+            if (type.includes("deluxe")) return "Deluxe";
+            if (type.includes("suite")) return "Suite";
+            if (type.includes("family")) return "Family";
+            return "Any";
+        }
+
+        function renderRooms(rooms) {
+            if (!rooms.length) {
+                roomsGrid.innerHTML = '<p class="rooms-message">No rooms match your search. Try another room type or guest count.</p>';
+                return;
+            }
+
+            roomsGrid.innerHTML = rooms.map(function (room) {
+                const type = room.room_type || "Hotel Room";
+                const price = Number(room.price_per_night_egp || 0);
+                const capacity = room.capacity || "Not specified";
+                const roomNumber = room.room_number || room.room_id || "—";
+                const status = room.status || "Not specified";
+                const description = room.description ||
+                    ("Room " + roomNumber + " with capacity for " + capacity + " guest(s). " +
+                    (String(room.has_wifi).toLowerCase() === "true" || String(room.has_wifi) === "1" ? "Wi-Fi included. " : "") +
+                    (String(room.has_air_conditioning).toLowerCase() === "true" || String(room.has_air_conditioning) === "1" ? "Air conditioning included." : ""));
+
+                return `
+                    <article class="room-card">
+                        <img src="${roomImage(type)}" alt="${escapeHTML(type)}" loading="lazy">
+                        <div class="room-info">
+                            <span class="room-status">${escapeHTML(status)}</span>
+                            <h3>${escapeHTML(type)}</h3>
+                            <p>${escapeHTML(description)}</p>
+                            <p>Room No.: ${escapeHTML(roomNumber)} · Capacity: ${escapeHTML(capacity)} guest(s)</p>
+                            <div class="room-bottom">
+                                <span class="price">EGP ${price.toLocaleString("en-EG")} <small>/ night</small></span>
+                                <button type="button" class="small-button" onclick="selectRoom('${escapeHTML(roomCategory(type))}')">Select Room</button>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join("");
+        }
+
+        async function loadRooms() {
+            try {
+                const response = await fetch("/api/rooms");
+                if (!response.ok) throw new Error("Could not load rooms from the server.");
+                allRooms = await response.json();
+                renderRooms(allRooms);
+            } catch (error) {
+                console.error("Error loading rooms:", error);
+                roomsGrid.innerHTML = '<p class="rooms-message">Could not load rooms. Make sure the Flask server is running and the /api/rooms endpoint works.</p>';
+            }
+        }
+
+        function selectRoom(roomType) {
+            const roomTypeSelect = document.getElementById("roomType");
+            roomTypeSelect.value = roomType;
+            document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+        }
+
+        
+document.getElementById("bookingForm").addEventListener(
+    "submit",
+    async function (event) {
+        event.preventDefault();
+
+        if (!checkin.value || !checkout.value) {
+            alert("Please select check-in and check-out dates.");
+            return;
+        }
+
+        if (checkout.value <= checkin.value) {
+            alert("Check-out must be after check-in.");
+            return;
+        }
+
+        const selectedGuests = Number(
+            document.getElementById("guests").value
+        );
+
+        const selectedRoom = document.getElementById("roomType").value;
+
+        const matchingRooms = allRooms.filter(function (room) {
+            const capacity = Number(room.capacity || 0);
+            const category = roomCategory(room.room_type);
+
+            return (
+                (selectedRoom === "Any" || category === selectedRoom) &&
+                (!capacity || capacity >= selectedGuests)
+            );
+        });
+
+        renderRooms(matchingRooms);
+
+        document.getElementById("rooms").scrollIntoView({
+            behavior: "smooth"
+        });
+
+        if (!matchingRooms.length) {
+            alert("No rooms match your selection. Try another room type.");
+            return;
+        }
+
+        const firstName = prompt("Enter your first name:");
+        if (!firstName || !firstName.trim()) return;
+
+        const lastName = prompt("Enter your last name:");
+        if (!lastName || !lastName.trim()) return;
+
+        const email = prompt("Enter your email address:");
+        if (!email || !email.trim()) return;
+
+        const phone = prompt("Enter your phone number:");
+        if (!phone || !phone.trim()) return;
+
+        const specialRequest =
+            prompt("Any special requests? (Optional)") || "";
+
+        try {
+            const response = await fetch("/api/bookings", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    first_name: firstName.trim(),
+                    last_name: lastName.trim(),
+                    email: email.trim(),
+                    phone: phone.trim(),
+                    check_in: checkin.value,
+                    check_out: checkout.value,
+                    adults: selectedGuests,
+                    room_type: selectedRoom,
+                    special_request: specialRequest.trim()
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                alert(result.error || "Booking failed.");
+                return;
+            }
+
+            alert(
+                "Booking saved successfully!\n\n" +
+                "Booking ID: " + result.booking_id + "\n" +
+                "Room Type: " + result.room_type + "\n" +
+                "Room Number: " + result.room_number + "\n" +
+                "Number of Nights: " + result.nights + "\n" +
+                "Total Price: EGP " + result.total_amount_egp
+            );
+
+        } catch (error) {
+            console.error("Booking error:", error);
+            alert("Could not connect to the server. Please try again.");
+        }
+    }
+);
+loadRooms();
+</script>
+<!-- EasyHotel Chatbot -->
+<style>
+    .chatbot-toggle {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 50%;
+        background: #b8955a;
+        color: white;
+        font-size: 27px;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 4px 15px #0003;
+    }
+
+    .chatbot-window {
+        position: fixed;
+        bottom: 98px;
+        right: 24px;
+        width: 340px;
+        max-width: calc(100vw - 32px);
+        height: 440px;
+        max-height: calc(100vh - 130px);
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 5px 25px #0003;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+    }
+
+    .chatbot-window.open {
+        display: flex;
+    }
+
+    .chatbot-header {
+        background: #24352c;
+        color: white;
+        padding: 17px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .chatbot-header h3 {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .chatbot-header p {
+        margin: 5px 0 0;
+        font-size: 12px;
+        color: #e6d7b8;
+    }
+
+    .chatbot-close {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .chatbot-messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background: #f8f7f3;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-message {
+        padding: 10px 12px;
+        border-radius: 12px;
+        max-width: 85%;
+        font-size: 14px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .bot-message {
+        background: white;
+        color: #24352c;
+        align-self: flex-start;
+        border: 1px solid #eee8dc;
+    }
+
+    .user-message {
+        background: #b8955a;
+        color: white;
+        align-self: flex-end;
+    }
+
+    .chatbot-input-area {
+        display: flex;
+        padding: 12px;
+        gap: 8px;
+        border-top: 1px solid #eee;
+        background: white;
+    }
+
+    .chatbot-input-area input {
+        min-width: 0;
+        flex: 1;
+        padding: 11px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+    }
+
+    .chatbot-input-area button {
+        border: none;
+        border-radius: 20px;
+        padding: 0 15px;
+        background: #24352c;
+        color: white;
+        cursor: pointer;
+    }
+
+    .chatbot-input-area button:disabled {
+        opacity: 0.6;
+        cursor: wait;
+    }
+
+    @media (max-width: 480px) {
+        .chatbot-window {
+            right: 16px;
+            bottom: 88px;
+            width: calc(100vw - 32px);
+        }
+
+        .chatbot-toggle {
+            right: 16px;
+            bottom: 16px;
+        }
+    }
+</style>
+
+<button
+    type="button"
+    class="chatbot-toggle"
+    id="chatbotToggle"
+    aria-label="Open EasyHotel chat"
+    aria-expanded="false"
+>
+    💬
+</button>
+
+<div
+    class="chatbot-window"
+    id="chatbotWindow"
+    role="dialog"
+    aria-label="EasyHotel assistant"
+>
+    <div class="chatbot-header">
+        <div>
+            <h3>EasyHotel Assistant</h3>
+            <p>Here to help with your stay</p>
+        </div>
+
+        <button
+            type="button"
+            class="chatbot-close"
+            id="chatbotClose"
+            aria-label="Close chat"
+        >
+            &times;
+        </button>
+    </div>
+
+    <div
+        class="chatbot-messages"
+        id="chatbotMessages"
+        aria-live="polite"
+    >
+        <div class="chat-message bot-message">
+            Hello! Welcome to EasyHotel.
+            Ask me about rooms, prices, or bookings.
+        </div>
+    </div>
+
+    <form class="chatbot-input-area" id="chatbotForm">
+        <input
+            type="text"
+            id="chatbotInput"
+            placeholder="Type your message..."
+            autocomplete="off"
+            aria-label="Your message"
+            required
+        >
+
+        <button type="submit" id="chatbotSend">Send</button>
+    </form>
+</div>
+
+<script>
+    const chatbotToggle = document.getElementById("chatbotToggle");
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    const chatbotClose = document.getElementById("chatbotClose");
+    const chatbotForm = document.getElementById("chatbotForm");
+    const chatbotInput = document.getElementById("chatbotInput");
+    const chatbotMessages = document.getElementById("chatbotMessages");
+
+    function toggleChat(open) {
+        chatbotWindow.classList.toggle("open", open);
+        chatbotToggle.setAttribute("aria-expanded", String(open));
+
+        if (open) {
+            chatbotInput.focus();
+        }
+    }
+
+    chatbotToggle.addEventListener("click", function () {
+        toggleChat(!chatbotWindow.classList.contains("open"));
+    });
+
+    chatbotClose.addEventListener("click", function () {
+        toggleChat(false);
+    });
+
+    function addChatMessage(message, sender) {
+        const bubble = document.createElement("div");
+        bubble.className = "chat-message " + sender;
+        bubble.textContent = message;
+        chatbotMessages.appendChild(bubble);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        return bubble;
+    }
+
+
+function getDemoReply(message) {
+    const text = message.toLowerCase();
+
+    if (!allRooms || allRooms.length === 0) {
+        return "Room data is not available right now. Please try again later.";
+    }
+
+    // Detect the budget from the user's message.
+    const budgetMatch = text.match(
+        /(?:egp|budget|جنيه|ميزانية)?\s*([0-9][0-9,]*(?:\.[0-9]+)?)\s*(?:egp|جنيه)?/i
+    );
+
+    const asksBudget =
+        text.includes("budget") ||
+        text.includes("how many nights") ||
+        text.includes("afford") ||
+        text.includes("ميزانية") ||
+        text.includes("كام ليلة") ||
+        text.includes("عدد الليالي");
+
+    if (asksBudget && budgetMatch) {
+        const budget = Number(budgetMatch[1].replace(/,/g, ""));
+
+        if (!Number.isFinite(budget) || budget <= 0) {
+            return "Please enter a valid budget in EGP.";
+        }
+
+    
+const cheapestRooms = new Map();
+
+allRooms.forEach(function (room) {
+    const type = room.room_type || "Room";
+    const price = Number(room.price_per_night_egp);
+
+    if (!Number.isFinite(price) || price <= 0) return;
+
+    if (
+        !cheapestRooms.has(type) ||
+        price < cheapestRooms.get(type).price
+    ) {
+        cheapestRooms.set(type, {
+            type: type,
+            price: price
+        });
+    }
+});
+
+const options = [...cheapestRooms.values()]
+    .map(function (room) {
+        return {
+            type: room.type,
+            price: room.price,
+            nights: Math.floor(budget / room.price)
+        };
+    })
+    .filter(function (room) {
+        return room.nights >= 1;
+    })
+    .sort(function (a, b) {
+        return b.nights - a.nights;
+    });
+
+
+
+        if (options.length === 0) {
+            return "Your budget is not enough for one night in the rooms listed in our data.";
+        }
+
+        const suggestions = options.slice(0, 5).map(function (room) {
+            return room.type +
+                ": " + room.nights +
+                " night(s), costing EGP " +
+                (room.nights * room.price).toLocaleString("en-EG") +
+                ". Price per night: EGP " +
+                room.price.toLocaleString("en-EG");
+        });
+
+        return "With your budget of EGP " +
+            budget.toLocaleString("en-EG") +
+            ", these options fit based on room prices:\n" +
+            suggestions.join("\n") +
+            "\nThese are estimates based on nightly prices only. Availability, dates, and additional fees must be confirmed before booking.";
+    }
+
+    if (
+        text.includes("price") ||
+        text.includes("cost") ||
+        text.includes("سعر") ||
+        text.includes("اسعار") ||
+        text.includes("الأسعار")
+    ) {
+        const prices = allRooms
+            .filter(function (room) {
+                return Number(room.price_per_night_egp) > 0;
+            })
+            .map(function (room) {
+                return room.room_type +
+                    ": EGP " +
+                    Number(room.price_per_night_egp).toLocaleString("en-EG") +
+                    " per night";
+            });
+
+        if (prices.length === 0) {
+            return "Room prices are not available right now.";
+        }
+
+        return "Room prices from our data:\n" +
+            prices.join("\n") +
+            "\nPlease check availability before booking.";
+    }
+
+    if (
+        text.includes("room") ||
+        text.includes("الغرف") ||
+        text.includes("غرفة") ||
+        text.includes("غرف")
+    ) {
+        const types = [...new Set(
+            allRooms.map(function (room) {
+                return room.room_type;
+            }).filter(Boolean)
+        )];
+
+        return "Room types in our data: " +
+            types.join(", ") +
+            ". Ask me about prices or a budget to compare room options.";
+    }
+
+    if (
+        text.includes("book") ||
+        text.includes("reservation") ||
+        text.includes("حجز") ||
+        text.includes("احجز")
+    ) {
+        document.getElementById("booking").scrollIntoView({
+            behavior: "smooth"
+        });
+
+        return "Choose your dates and room type in the booking section. The booking form handles the actual booking request.";
+    }
+
+    if (
+        text.includes("hello") ||
+        text.includes("hi") ||
+        text.includes("مرحبا") ||
+        text.includes("اهلا") ||
+        text.includes("أهلا")
+    ) {
+        return "Hello! Welcome to EasyHotel. I can help you explore room types, prices, and budget estimates.";
+    }
+
+    return "I can help with room types, prices, and budget estimates. For example, ask: 'I have a budget of 5000 EGP. How many nights can I stay?'";
+}
+
+
+    chatbotForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const message = chatbotInput.value.trim();
+
+        if (!message) return;
+
+        addChatMessage(message, "user-message");
+        chatbotInput.value = "";
+
+        const reply = getDemoReply(message);
+        addChatMessage(reply, "bot-message");
+    });
+</script>
+<!-- End EasyHotel Chatbot -->
+ </body>
+</html>

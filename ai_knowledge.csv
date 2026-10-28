@@ -1,0 +1,16 @@
+﻿faq_id,question,answer,category
+FAQ001,What time is check-in?,Check-in starts at 2:00 PM.,Check-in
+FAQ002,What time is check-out?,Check-out is by 12:00 PM.,Check-out
+FAQ003,Does the hotel provide Wi-Fi?,Wi-Fi is available in guest rooms and common areas.,Facilities
+FAQ004,Can I cancel a booking?,Cancellation depends on the booking terms. Contact reception for help.,Bookings
+FAQ005,Is breakfast available?,Breakfast is available as an optional service; check its current price.,Dining
+FAQ006,Can I request an extra bed?,Extra beds may be available for an additional charge.,Rooms
+FAQ007,How can I contact reception?,Use the reception contact details shown on the website.,Contact
+FAQ008,Are pets allowed?,Contact the hotel to confirm its current pet policy.,Policies
+FAQ009,Is airport transfer available?,Airport transfer can be requested as an additional service.,Transport
+FAQ010,What payment methods are supported?,"The demo includes cash, card, bank transfer, and wallet records.",Payments
+FAQ011,Can I change my dates?,Date changes depend on availability and booking conditions.,Bookings
+FAQ012,Does every room have air conditioning?,The sample room dataset marks all rooms as having air conditioning.,Facilities
+FAQ013,Is parking available?,Parking is listed as an optional service in the demo dataset.,Transport
+FAQ014,Can I book more than one room?,A full website can support multiple rooms in the booking flow.,Bookings
+FAQ015,How do I leave a review?,A guest can submit a review after the review feature is implemented.,Reviews

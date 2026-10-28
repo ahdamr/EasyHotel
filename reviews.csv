@@ -1,0 +1,101 @@
+﻿review_id,guest_id,rating,review_text,review_date,review_status
+REV0001,G0061,4,Breakfast was nice and fresh.,2025-02-18,Pending
+REV0002,G0100,4,"Service was okay, but could be faster.",2026-07-20,Published
+REV0003,G0004,5,The location was convenient.,2026-09-28,Pending
+REV0004,G0058,5,"Service was okay, but could be faster.",2026-08-26,Published
+REV0005,G0050,4,Good value for the price.,2025-03-18,Published
+REV0006,G0045,5,Friendly staff and smooth check-in.,2026-01-22,Published
+REV0007,G0110,4,Breakfast was nice and fresh.,2025-05-14,Published
+REV0008,G0150,5,The room was clean and comfortable.,2025-12-05,Pending
+REV0009,G0040,2,"Service was okay, but could be faster.",2026-09-04,Published
+REV0010,G0078,4,Check-in took longer than expected.,2026-01-02,Published
+REV0011,G0082,4,Good value for the price.,2026-06-18,Published
+REV0012,G0130,3,Check-in took longer than expected.,2026-07-04,Pending
+REV0013,G0024,4,The location was convenient.,2025-12-06,Published
+REV0014,G0093,4,Check-in took longer than expected.,2026-05-02,Published
+REV0015,G0030,5,The facilities were good overall.,2025-09-04,Published
+REV0016,G0011,5,"Service was okay, but could be faster.",2026-01-26,Published
+REV0017,G0099,4,Breakfast was nice and fresh.,2025-01-26,Published
+REV0018,G0132,5,The facilities were good overall.,2026-05-14,Published
+REV0019,G0076,5,The location was convenient.,2025-11-25,Published
+REV0020,G0025,3,Check-in took longer than expected.,2026-07-01,Published
+REV0021,G0017,3,The location was convenient.,2026-03-11,Published
+REV0022,G0053,4,I enjoyed my stay and would visit again.,2025-03-15,Published
+REV0023,G0007,4,"Service was okay, but could be faster.",2025-02-08,Published
+REV0024,G0019,2,Breakfast was nice and fresh.,2026-07-26,Published
+REV0025,G0148,5,Breakfast was nice and fresh.,2026-02-22,Pending
+REV0026,G0116,5,I enjoyed my stay and would visit again.,2025-11-20,Published
+REV0027,G0100,5,Check-in took longer than expected.,2025-01-07,Published
+REV0028,G0150,2,Friendly staff and smooth check-in.,2026-01-02,Published
+REV0029,G0075,5,Breakfast was nice and fresh.,2026-09-14,Published
+REV0030,G0073,5,The facilities were good overall.,2026-01-26,Pending
+REV0031,G0008,4,Check-in took longer than expected.,2025-08-14,Published
+REV0032,G0101,5,Check-in took longer than expected.,2025-10-30,Published
+REV0033,G0077,5,"Service was okay, but could be faster.",2025-01-12,Published
+REV0034,G0032,2,I enjoyed my stay and would visit again.,2026-07-05,Published
+REV0035,G0079,3,"Service was okay, but could be faster.",2025-08-05,Pending
+REV0036,G0132,3,Good value for the price.,2025-08-15,Published
+REV0037,G0050,3,The room was clean and comfortable.,2026-07-17,Pending
+REV0038,G0141,2,Friendly staff and smooth check-in.,2025-09-14,Published
+REV0039,G0051,5,The facilities were good overall.,2025-12-05,Published
+REV0040,G0033,5,The location was convenient.,2025-04-13,Published
+REV0041,G0018,5,"Service was okay, but could be faster.",2026-05-13,Pending
+REV0042,G0085,5,Breakfast was nice and fresh.,2026-08-22,Published
+REV0043,G0145,5,"Service was okay, but could be faster.",2026-03-15,Published
+REV0044,G0002,4,The location was convenient.,2026-03-23,Published
+REV0045,G0093,3,"Service was okay, but could be faster.",2026-05-07,Pending
+REV0046,G0115,4,Breakfast was nice and fresh.,2026-05-14,Published
+REV0047,G0045,5,Friendly staff and smooth check-in.,2025-10-15,Published
+REV0048,G0138,3,Friendly staff and smooth check-in.,2025-03-19,Published
+REV0049,G0130,5,I enjoyed my stay and would visit again.,2026-08-28,Published
+REV0050,G0010,5,Check-in took longer than expected.,2026-07-07,Pending
+REV0051,G0039,4,The location was convenient.,2026-08-27,Published
+REV0052,G0035,4,Check-in took longer than expected.,2025-04-03,Pending
+REV0053,G0094,4,The location was convenient.,2026-09-21,Published
+REV0054,G0132,3,Good value for the price.,2025-07-03,Published
+REV0055,G0124,5,The room was clean and comfortable.,2025-08-13,Pending
+REV0056,G0060,2,"Service was okay, but could be faster.",2025-08-28,Published
+REV0057,G0053,4,"Service was okay, but could be faster.",2026-02-02,Pending
+REV0058,G0117,5,The room was clean and comfortable.,2025-11-28,Published
+REV0059,G0134,5,Breakfast was nice and fresh.,2025-09-27,Published
+REV0060,G0097,5,"Service was okay, but could be faster.",2026-08-25,Published
+REV0061,G0133,4,The location was convenient.,2026-06-13,Pending
+REV0062,G0091,5,"Service was okay, but could be faster.",2026-05-14,Pending
+REV0063,G0002,4,Good value for the price.,2026-03-27,Published
+REV0064,G0059,2,Breakfast was nice and fresh.,2025-08-05,Published
+REV0065,G0048,3,Friendly staff and smooth check-in.,2025-08-24,Pending
+REV0066,G0085,5,The facilities were good overall.,2026-05-06,Pending
+REV0067,G0054,5,I enjoyed my stay and would visit again.,2025-01-23,Published
+REV0068,G0012,3,Good value for the price.,2025-05-18,Published
+REV0069,G0147,3,Good value for the price.,2025-09-22,Published
+REV0070,G0133,5,The room was clean and comfortable.,2025-10-18,Published
+REV0071,G0056,4,The facilities were good overall.,2026-05-09,Published
+REV0072,G0057,5,Good value for the price.,2026-08-20,Published
+REV0073,G0131,4,"Service was okay, but could be faster.",2026-04-10,Published
+REV0074,G0059,4,Good value for the price.,2025-04-22,Published
+REV0075,G0052,4,Check-in took longer than expected.,2026-03-06,Published
+REV0076,G0025,3,The room was clean and comfortable.,2026-06-29,Published
+REV0077,G0024,4,Good value for the price.,2026-09-10,Published
+REV0078,G0111,4,"Service was okay, but could be faster.",2025-02-14,Pending
+REV0079,G0059,5,The facilities were good overall.,2026-01-26,Published
+REV0080,G0148,3,Good value for the price.,2025-09-18,Pending
+REV0081,G0060,5,Friendly staff and smooth check-in.,2025-10-18,Pending
+REV0082,G0066,3,The room was clean and comfortable.,2026-08-15,Published
+REV0083,G0134,1,The location was convenient.,2025-11-20,Pending
+REV0084,G0093,3,I enjoyed my stay and would visit again.,2026-08-23,Published
+REV0085,G0067,5,I enjoyed my stay and would visit again.,2026-08-02,Published
+REV0086,G0071,5,I enjoyed my stay and would visit again.,2025-07-28,Pending
+REV0087,G0142,5,The facilities were good overall.,2025-07-03,Published
+REV0088,G0144,5,Breakfast was nice and fresh.,2025-11-11,Published
+REV0089,G0102,5,Friendly staff and smooth check-in.,2025-08-24,Pending
+REV0090,G0042,3,Check-in took longer than expected.,2026-02-15,Published
+REV0091,G0141,5,The room was clean and comfortable.,2025-06-14,Pending
+REV0092,G0002,5,Good value for the price.,2026-04-28,Pending
+REV0093,G0023,2,The location was convenient.,2026-01-15,Published
+REV0094,G0010,5,I enjoyed my stay and would visit again.,2026-09-21,Published
+REV0095,G0015,5,Good value for the price.,2026-05-22,Pending
+REV0096,G0003,3,Check-in took longer than expected.,2025-10-20,Published
+REV0097,G0009,5,Check-in took longer than expected.,2026-06-13,Published
+REV0098,G0044,5,"Service was okay, but could be faster.",2025-09-02,Published
+REV0099,G0041,3,Breakfast was nice and fresh.,2026-02-14,Published
+REV0100,G0102,4,The location was convenient.,2026-06-15,Published

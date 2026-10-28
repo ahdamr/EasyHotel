@@ -1,0 +1,11 @@
+﻿service_id,service_name,category,price_egp,description
+S001,Breakfast,Meal,250,Breakfast per person
+S002,Airport Transfer,Transport,700,One-way transfer
+S003,Laundry,Laundry,180,Standard laundry bag
+S004,Room Service,Dining,100,Service fee per order
+S005,Spa Access,Wellness,500,One-day access
+S006,Gym Access,Wellness,150,One-day access
+S007,Late Checkout,Convenience,400,Subject to availability
+S008,Extra Bed,Room Add-on,600,Per night
+S009,City Tour,Tour,950,Half-day guided tour
+S010,Parking,Transport,100,Per day

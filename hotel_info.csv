@@ -1,0 +1,11 @@
+﻿setting_key,setting_value,category
+hotel_name,EasyHotel,General
+currency,EGP,Finance
+check_in_time,14:00,Policy
+check_out_time,12:00,Policy
+support_email,support@example.com,Contact
+support_phone,01000000000,Contact
+wifi_available,Yes,Facilities
+parking_available,Yes - optional service,Facilities
+address,"Demo address, Egypt",General
+dataset_note,Fictional educational sample data; not real guest information.,General
